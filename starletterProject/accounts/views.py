@@ -1,6 +1,7 @@
-from rest_framework import viewsets, status
+from rest_framework import viewsets, status, generics
 from rest_framework.response import Response
-from .serializers import RegisterSerializer
+from .serializers import RegisterSerializer, LoginSerializer
+
 
 class RegisterViewSet(viewsets.ViewSet):
     def create(self, request):
@@ -12,3 +13,13 @@ class RegisterViewSet(viewsets.ViewSet):
                 'password': user.password
             }, status=status.HTTP_201_CREATED)
         return Response(serializer.errors)
+    
+
+class LoginViewSet(generics.GenericAPIView):
+    serializer_class = LoginSerializer
+    
+    def post(self, request):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        token = serializer.validated_data 
+        return Response({"token": token.key}, status=status.HTTP_200_OK)
