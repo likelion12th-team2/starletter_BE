@@ -2,6 +2,7 @@ from rest_framework import viewsets, status, generics
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet 
 from .serializers import RegisterSerializer, LoginSerializer
+from rest_framework.permissions import IsAuthenticated
 
 from .models import *
 from .serializers import *
@@ -29,9 +30,15 @@ class LoginViewSet(generics.GenericAPIView):
         return Response({"token": token.key}, status=status.HTTP_200_OK)
     
 
-class PetViewSet(ModelViewSet):
+class MyPetViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
     queryset = PetInfo.objects.all()
     serializer_class = PetSerializer
 
+    def get_queryset(self, **kwargs):
+        pet_user = self.request.user.userinfo
+        return self.queryset.filter(pet_user=pet_user)
+    
     def perform_create(self, serializer):
-        serializer.save(user = self.request.user)
+        pet_user = self.request.user.userinfo
+        serializer.save(pet_user=pet_user)

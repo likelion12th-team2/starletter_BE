@@ -11,12 +11,13 @@ class UserInfo(models.Model):
     def __str__(self):
         return self.nickname
     
-class PetInfo(models.Model):
-    petName = models.CharField(max_length=30)
-    petBirth = models.DateField(verbose_name="반려동물 출생일")
-    petAnniv = models.DateField(verbose_name="반려동물 사망일")
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+class PetInfo(models.Model):
+    pet_name = models.CharField(max_length=30, null=True)
+    pet_birth = models.DateField(verbose_name="반려동물 출생일", null=True)
+    pet_anniv = models.DateField(verbose_name="반려동물 사망일", null=True)
+
+    pet_user = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='my_pets', null=True)
 
     def __str__(self):
-        return self.petName
+        return self.pet_name
