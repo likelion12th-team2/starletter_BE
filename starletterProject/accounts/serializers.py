@@ -62,11 +62,11 @@ class LoginSerializer(serializers.Serializer):
     
 
 class PetSerializer(serializers.ModelSerializer):
-    user = serializers.ReadOnlyField(source = 'user.username')
+    pet_user = serializers.ReadOnlyField(source = 'pet_user.nickname')
 
-    petBirth = serializers.DateField(format="%Y.%m.%d")
-    petAnniv = serializers.DateField(format="%Y.%m.%d")
+    pet_birth = serializers.DateField(format="%Y.%m.%d")
+    pet_anniv = serializers.DateField(format="%Y.%m.%d")
 
     class Meta:
         model = PetInfo
-        fields = [ 'id', 'petName', 'petBirth', 'petAnniv', 'user']
+        fields = ['id', 'pet_name', 'pet_birth', 'pet_anniv', 'pet_user']

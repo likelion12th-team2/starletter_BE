@@ -1,9 +1,9 @@
 from django.urls import path, include
 from rest_framework.routers import SimpleRouter
-from .views import RegisterViewSet, LoginViewSet, PetViewSet
+from .views import RegisterViewSet, LoginViewSet, MyPetViewSet
 
-pet_router = SimpleRouter(trailing_slash=False)
-pet_router.register('pets', PetViewSet, basename='pet')
+pet_router = SimpleRouter()
+pet_router.register('pets', MyPetViewSet, basename='pets')
 
 urlpatterns = [
     path('register/', RegisterViewSet.as_view({'post':'create'})),
