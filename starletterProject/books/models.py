@@ -6,7 +6,7 @@ class Book(models.Model):
     title = models.CharField(max_length=128)
     pet = models.OneToOneField(PetInfo, on_delete=models.CASCADE, related_name='pet_book')
     author = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='my_books')
-    description = models.TextField(default='')
+    description = models.CharField(max_length=500, default='')
     last_updated = models.DateField(null=True)
 
     def __str__(self):
