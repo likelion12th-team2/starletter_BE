@@ -1,11 +1,12 @@
 from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate
 
 from django.contrib.auth.models import User
-from .models import UserInfo
+from .models import *
 
 class RegisterSerializer(serializers.Serializer):
     username = serializers.CharField(
@@ -58,3 +59,14 @@ class LoginSerializer(serializers.Serializer):
         raise serializers.ValidationError( # 가입된 유저가 없을 경우
             {"error": "Unable to log in with provided credentials."}
         )
+    
+
+class PetSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source = 'user.username')
+
+    petBirth = serializers.DateField(format="%Y.%m.%d")
+    petAnniv = serializers.DateField(format="%Y.%m.%d")
+
+    class Meta:
+        model = PetInfo
+        fields = [ 'id', 'petName', 'petBirth', 'petAnniv', 'user']

@@ -1,6 +1,10 @@
 from rest_framework import viewsets, status, generics
 from rest_framework.response import Response
+from rest_framework.viewsets import ModelViewSet 
 from .serializers import RegisterSerializer, LoginSerializer
+
+from .models import *
+from .serializers import *
 
 
 class RegisterViewSet(viewsets.ViewSet):
@@ -23,3 +27,11 @@ class LoginViewSet(generics.GenericAPIView):
         serializer.is_valid(raise_exception=True)
         token = serializer.validated_data 
         return Response({"token": token.key}, status=status.HTTP_200_OK)
+    
+
+class PetViewSet(ModelViewSet):
+    queryset = PetInfo.objects.all()
+    serializer_class = PetSerializer
+
+    def perform_create(self, serializer):
+        serializer.save(user = self.request.user)
