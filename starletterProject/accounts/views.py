@@ -16,7 +16,18 @@ class RegisterViewSet(viewsets.ViewSet):
                 'username': user.username,
                 'password': user.password
             }, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors)
+        else:
+            error_dict = dict(serializer.errors)
+            print(error_dict)
+            if ('username' in error_dict) and ('nickname' in error_dict):
+                error_message = '이미 사용 중인 아이디와 닉네임입니다.'
+                return Response({'option':1, 'message':error_message}, status=status.HTTP_400_BAD_REQUEST)
+            elif 'username' in error_dict:
+                error_message = '이미 사용 중인 아이디입니다.'
+                return Response({'option':2, 'message':error_message}, status=status.HTTP_400_BAD_REQUEST)
+            else:
+                error_message = '이미 사용 중인 닉네임입니다.'
+                return Response({'option':3, 'message':error_message}, status=status.HTTP_400_BAD_REQUEST)
     
 
 class MyPetViewSet(ModelViewSet):
