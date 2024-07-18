@@ -7,6 +7,7 @@ class Book(models.Model):
     pet = models.OneToOneField(PetInfo, on_delete=models.CASCADE, related_name='pet_book')
     author = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='my_books')
     description = models.CharField(max_length=500, default='')
+    cover = models.ImageField(blank=True, null=True, upload_to='book_covers')
     last_updated = models.DateField(null=True)
 
     def __str__(self):
@@ -22,6 +23,16 @@ class Page(models.Model):
 
     def __str__(self):
         return self.body # 애매하지만 일단 body로 설정, 확인 후 주석 삭제 바람 
+    
+def page_image_upload_path(instance, filename):
+    return f'page_images/{instance.page.id}/{filename}'
+
+class PageImage(models.Model):
+    page = models.ForeignKey(Page, on_delete=models.CASCADE, related_name='images')
+    images = models.ImageField(upload_to=page_image_upload_path)
+
+    def __int__(self):
+        return self.id
     
 
 class Note(models.Model):
