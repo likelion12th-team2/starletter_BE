@@ -1,0 +1,902 @@
+[
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 1,
+    "fields": {
+        "original_id": 1,
+        "name": "하늘소풍",
+        "location": "경남 고성군 회화면 봉오로",
+        "contact": "1566-4546",
+        "link": "http://www.하늘소풍.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 2,
+    "fields": {
+        "original_id": 2,
+        "name": "한별 리멤버파크",
+        "location": "경상남도 함안군 법수면 이묵골로",
+        "contact": "1899-2610",
+        "link": "http://hanbyuldog.modoo.at",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 3,
+    "fields": {
+        "original_id": 3,
+        "name": "(주)펫노블레스",
+        "location": "경상남도 양산시 상북면 공원로",
+        "contact": "055-374-4400",
+        "link": "http://www.petnoblesse.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 4,
+    "fields": {
+        "original_id": 4,
+        "name": "메리온",
+        "location": "경남 양산시 상북면 오룡길",
+        "contact": "055-374-6503",
+        "link": "http://www.merion.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 5,
+    "fields": {
+        "original_id": 5,
+        "name": "별이되다",
+        "location": "경상남도 김해시 생림면 나전리",
+        "contact": "1566-9399",
+        "link": "http://www.becomestars.co.kr",
+        "tag": "CR,FU,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 6,
+    "fields": {
+        "original_id": 6,
+        "name": "포포즈 반려동물 장례식장 부산점",
+        "location": "경상남도 김해시 한림면 안하로",
+        "contact": "1588-2888",
+        "link": "http://fourpaws.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 7,
+    "fields": {
+        "original_id": 7,
+        "name": "아이헤븐",
+        "location": "경상남도 김해시 생림면 봉림리",
+        "contact": "1577-5474 ",
+        "link": "http://iheaven.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 8,
+    "fields": {
+        "original_id": 8,
+        "name": "펫로스 케어",
+        "location": "경상남도 김해시 상동면 묵방로",
+        "contact": "1522-2253",
+        "link": "http://www.petlosscare.co.kr/",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 9,
+    "fields": {
+        "original_id": 9,
+        "name": "한별 반려동물 장례식장",
+        "location": "경남 창원시 진해구 진해대로",
+        "contact": "1644-9040",
+        "link": "https://hanbyul16449040.modoo.at",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 10,
+    "fields": {
+        "original_id": 10,
+        "name": "스윗드림 펫",
+        "location": "경상북도 칠곡군 가산면 다부거문1길",
+        "contact": "054-974-2220",
+        "link": "http://www.sweetdreampet.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 11,
+    "fields": {
+        "original_id": 11,
+        "name": "강아지 펫 헤븐",
+        "location": "경상북도 성주군 선남면 오도리",
+        "contact": "1899-6144",
+        "link": "http://petheaven.ad-media.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 12,
+    "fields": {
+        "original_id": 12,
+        "name": "하얀민들레",
+        "location": "경북 청도군 화양읍 남성현로",
+        "contact": "1599-1627",
+        "link": "http://www.youngheal.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 13,
+    "fields": {
+        "original_id": 13,
+        "name": "아이들랜드",
+        "location": "경상북도 경산시 와촌면 불굴사길",
+        "contact": "1522-6979",
+        "link": "http://아이들랜드.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 14,
+    "fields": {
+        "original_id": 14,
+        "name": "(주)젠틀펫",
+        "location": "경상북도 문경시 문경읍 문경대로",
+        "contact": "1577-3620",
+        "link": "http://gentlepetstar.com/",
+        "tag": "FU"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 15,
+    "fields": {
+        "original_id": 15,
+        "name": "(주)한별소울펫",
+        "location": "경상북도 구미시 옥성면 이곡3길",
+        "contact": "1588-9749",
+        "link": "https://hanbyulsoulpet.modoo.at",
+        "tag": "FU,CR,DR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 16,
+    "fields": {
+        "original_id": 16,
+        "name": "경북반려동물장례식장",
+        "location": "경상북도 김천시 봉산면 영남대로",
+        "contact": "1522-0912",
+        "link": "http://gbpet.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 17,
+    "fields": {
+        "original_id": 17,
+        "name": "타임투반려동물장례문화원",
+        "location": "전라남도 함평군 학교면 학교월봉길",
+        "contact": "061-322-0122",
+        "link": "http://www.timeto.co.kr",
+        "tag": "FU,DR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 18,
+    "fields": {
+        "original_id": 18,
+        "name": "순천 반려동물장례식장 하늘별",
+        "location": "전라남도 순천시 별량면 송산길",
+        "contact": "061-741-0703",
+        "link": "https://www.하늘별반려동물장례식장.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 19,
+    "fields": {
+        "original_id": 19,
+        "name": "전남반려동물장례식장 푸른솔 (주)",
+        "location": "전라남도 여수시 율촌면 조화길",
+        "contact": "1566-7112",
+        "link": "https://www.greenssol.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 20,
+    "fields": {
+        "original_id": 20,
+        "name": "해늘마루",
+        "location": "전남 목포시 고하대로",
+        "contact": "061-273-4000",
+        "link": "http://www.haeneul.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 21,
+    "fields": {
+        "original_id": 21,
+        "name": "오수 펫 추모공원",
+        "location": "전라북도 임실군 오수면 춘향로",
+        "contact": "063-643-0486",
+        "link": "http://www.osupet.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 22,
+    "fields": {
+        "original_id": 22,
+        "name": "해피펫",
+        "location": "전라북도 완주군 이서면 팥죽이로",
+        "contact": "063-242-2114",
+        "link": "",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 23,
+    "fields": {
+        "original_id": 23,
+        "name": "전주 하늘",
+        "location": "전라북도 완주군 소양면 전진로",
+        "contact": "063-432-0600",
+        "link": "http://전주하늘반려동물장례식장.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 24,
+    "fields": {
+        "original_id": 24,
+        "name": "펫바라기",
+        "location": "전북 남원시 보절면 신파리",
+        "contact": "063-625-3737",
+        "link": "http://www.petbaragi.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 25,
+    "fields": {
+        "original_id": 25,
+        "name": "서래안 펫타운",
+        "location": "전라북도 군산시 서래안1길",
+        "contact": "",
+        "link": "",
+        "tag": "FU"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 26,
+    "fields": {
+        "original_id": 26,
+        "name": "전주 반려동물 장례식장 아리움",
+        "location": "전라북도 전주시 완산구 콩쥐팥쥐로",
+        "contact": "063-223-7942",
+        "link": "http://www.arium.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 27,
+    "fields": {
+        "original_id": 27,
+        "name": "위드엔젤",
+        "location": "충남 예산군 대슬면 화산리",
+        "contact": "041-332-8787",
+        "link": "http://www.withangel.net",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 28,
+    "fields": {
+        "original_id": 28,
+        "name": "리멤버 파크",
+        "location": "충청남도 논산시 연산면 계백로",
+        "contact": "041-735-1700",
+        "link": "http://www.rememberpark.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 29,
+    "fields": {
+        "original_id": 29,
+        "name": "㈜좋은친구들",
+        "location": "충남 공주시 우성면 보흥2길",
+        "contact": "041-858-4411",
+        "link": "http://goodfriend2012.com",
+        "tag": "FU,CR"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 30,
+    "fields": {
+        "original_id": 30,
+        "name": "21그램 반려동물 장례식장 천안아산점",
+        "location": "충남 천안시 동남구 광풍로",
+        "contact": "1688-1240",
+        "link": "http://21gram.co.kr",
+        "tag": "FU,CR,DR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 31,
+    "fields": {
+        "original_id": 31,
+        "name": "우바스",
+        "location": "충북 청주시 상당구 신송서원길",
+        "contact": "1588-6326",
+        "link": "http://www.ubas.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 32,
+    "fields": {
+        "original_id": 32,
+        "name": "러블리엔젤",
+        "location": "충청북도 청주시 서원구 남이면",
+        "contact": "1577-2518",
+        "link": "http://www.lovelyangel.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 33,
+    "fields": {
+        "original_id": 33,
+        "name": "스마일 어게인",
+        "location": "충청북도 영동군 추풍령면 작동",
+        "contact": "1544-9262",
+        "link": "http://www.smileagain.net",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 34,
+    "fields": {
+        "original_id": 34,
+        "name": "대전 스카이 펫",
+        "location": "충청북도 옥천군 이원면 이원로",
+        "contact": "1588-4476",
+        "link": "https://mamresky.modoo.at/",
+        "tag": "CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 35,
+    "fields": {
+        "original_id": 35,
+        "name": "굿바이펫",
+        "location": "충북 제천시 봉양읍 장평리",
+        "contact": "043-642-1537",
+        "link": "http://goodbyepet.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 36,
+    "fields": {
+        "original_id": 36,
+        "name": "펫 메모리얼",
+        "location": "강원 횡성군 공근면 경강로초원",
+        "contact": "1566-4379",
+        "link": "http://www.petmemorial.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 37,
+    "fields": {
+        "original_id": 37,
+        "name": "강릉 펫사랑",
+        "location": "강원 강릉시 사천면 구라미길",
+        "contact": "033-645-8888",
+        "link": "https://gpetlove.modoo.at",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 38,
+    "fields": {
+        "original_id": 38,
+        "name": "주식회사 패투헤븐",
+        "location": "강원 원주시 소초면 현촌길",
+        "contact": "033-745-4211",
+        "link": "https://www.pettoheaven.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 39,
+    "fields": {
+        "original_id": 39,
+        "name": "스타펫",
+        "location": "경기도 포천시 내촌면 진금로",
+        "contact": "1588-9344",
+        "link": "",
+        "tag": "CR"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 40,
+    "fields": {
+        "original_id": 40,
+        "name": "포포즈 반려동물 장례식장 경기 양주점",
+        "location": "경기 양주시 광적면 부흥로",
+        "contact": "1588-2888",
+        "link": "http://fourpaws.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 41,
+    "fields": {
+        "original_id": 41,
+        "name": "백꽃사랑하이빛",
+        "location": "경기도 광주시 곤지암읍 부항리",
+        "contact": "",
+        "link": "",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 42,
+    "fields": {
+        "original_id": 42,
+        "name": "하늘강아지 반려동물 장례식장",
+        "location": "경기도 광주시 초월읍 선장동길",
+        "contact": "1577-4428",
+        "link": "https://skyplayground.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 43,
+    "fields": {
+        "original_id": 43,
+        "name": "러브펫",
+        "location": "경기 광주시 초월읍 지월리",
+        "contact": "031-796-4341",
+        "link": "http://www.러브펫.net",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 44,
+    "fields": {
+        "original_id": 44,
+        "name": "21그램 반려동물 장례식장",
+        "location": "경기 광주시 오포읍 매산리",
+        "contact": "1688-1240",
+        "link": "http://21gram.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 45,
+    "fields": {
+        "original_id": 45,
+        "name": "포포즈 반려동물 장례식장 경기 광주점",
+        "location": "경기 광주시 초월읍 산수로",
+        "contact": "1588-2888",
+        "link": "http://fourpaws.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 46,
+    "fields": {
+        "original_id": 46,
+        "name": "㈜펫포레스트",
+        "location": "경기 광주시 오포읍 문형리",
+        "contact": "1577-0996",
+        "link": "http://petforest.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 47,
+    "fields": {
+        "original_id": 47,
+        "name": "㈜해피엔딩",
+        "location": "경기 광주시 초월읍 지월리",
+        "contact": "1899-5127",
+        "link": "http://www.wehappyending.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 48,
+    "fields": {
+        "original_id": 48,
+        "name": "스토리펫",
+        "location": "경기도 화성시 정남면 서봉로",
+        "contact": "031-353-5579",
+        "link": "http://www.스토리펫.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 49,
+    "fields": {
+        "original_id": 49,
+        "name": "펫오케스트라",
+        "location": "경기도 화성시 비봉면 양노남길",
+        "contact": "1588-1289",
+        "link": "http://www.petorchestra.co.kr/",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 50,
+    "fields": {
+        "original_id": 50,
+        "name": "(주)포이리스",
+        "location": "경기도 화성시 서신면 안벼슬길",
+        "contact": "1899-6415",
+        "link": "https://pawiris.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 51,
+    "fields": {
+        "original_id": 51,
+        "name": "포포즈 반려동물 장례식장 경기 화성점",
+        "location": "경기도 화성시 팔탄면 독곡길",
+        "contact": "1588-2888",
+        "link": "http://fourpaws.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 52,
+    "fields": {
+        "original_id": 52,
+        "name": "ROYHILLS",
+        "location": "경기도 양평군 양동면 양동금곡",
+        "contact": "1855-2004",
+        "link": "https://www.royhills.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 53,
+    "fields": {
+        "original_id": 53,
+        "name": "아이드림펫",
+        "location": "경기 김포시 하성면 하성로",
+        "contact": "031-996-7444",
+        "link": "http://www.idreampet.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 54,
+    "fields": {
+        "original_id": 54,
+        "name": "엔젤스톤",
+        "location": "경기 김포시 하성면 양택리",
+        "contact": "031-981-0271",
+        "link": "http://www.angelstone.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 55,
+    "fields": {
+        "original_id": 55,
+        "name": "마스꼬따 휴㈜",
+        "location": "경기도 김포시 통진읍 애기봉로",
+        "contact": "031-989-2444",
+        "link": "http://www.mascotahue.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 56,
+    "fields": {
+        "original_id": 56,
+        "name": "포포즈 반려동물 장례식장 경기 김포점",
+        "location": "경기 김포시 월곶면 애기봉로",
+        "contact": "1588-2888",
+        "link": "http://fourpaws.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 57,
+    "fields": {
+        "original_id": 57,
+        "name": "펫포레스트 김포점",
+        "location": "경기도 김포시 통진읍 고정로",
+        "contact": "1577-0996",
+        "link": "http://petforest.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 58,
+    "fields": {
+        "original_id": 58,
+        "name": "㈜아리아펫",
+        "location": "경기 이천시 마장면 장암리",
+        "contact": "031-635-2266",
+        "link": "http://www.aria.pet",
+        "tag": "FU,CR"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 59,
+    "fields": {
+        "original_id": 59,
+        "name": "(주)페어웰",
+        "location": "경기도 파주시 광탄면 수레길",
+        "contact": "031-941-3350",
+        "link": "http://farewell.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 60,
+    "fields": {
+        "original_id": 60,
+        "name": "리멤버",
+        "location": "경기도 용인시 처인구 남사면",
+        "contact": "080-200-5004",
+        "link": "http://리멤버.net",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 61,
+    "fields": {
+        "original_id": 61,
+        "name": "씨엘로펫",
+        "location": "경기도 용인시 처인구 죽양대로",
+        "contact": "1577-7332",
+        "link": "http://www.cielopet.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 62,
+    "fields": {
+        "original_id": 62,
+        "name": "21그램 반려동물 장례식장 남양주점",
+        "location": "경기도 남양주시 화도읍 수레로",
+        "contact": "1688-1240",
+        "link": "http://21gram.co.kr",
+        "tag": "FU,CR"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 63,
+    "fields": {
+        "original_id": 63,
+        "name": "몽몽이엠파크",
+        "location": "경기도 남양주시 화도읍 모꼬지로",
+        "contact": "1811-1336",
+        "link": "http://mmempark.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 64,
+    "fields": {
+        "original_id": 64,
+        "name": "㈜펫바라기",
+        "location": "경기 고양시 일산동구 설문동",
+        "contact": "031-976-3179",
+        "link": "http://www.petbaragi.com",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 65,
+    "fields": {
+        "original_id": 65,
+        "name": "(주)펫콤",
+        "location": "경기 안산시 단원구 광덕서로",
+        "contact": "1833-5158",
+        "link": "https://petcom.kr",
+        "tag": "CR"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 66,
+    "fields": {
+        "original_id": 66,
+        "name": "이별공간",
+        "location": "울산광역시 울주군 삼동면 조일리",
+        "contact": "",
+        "link": "http://ebyulplace.modoo.at",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 67,
+    "fields": {
+        "original_id": 67,
+        "name": "㈜하늘펫",
+        "location": "광주 광산구 지죽동",
+        "contact": "062-946-2626",
+        "link": "",
+        "tag": "FU"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 68,
+    "fields": {
+        "original_id": 68,
+        "name": "㈜더 포에버",
+        "location": "인천광역시 서구 설원로",
+        "contact": "032-713-5002",
+        "link": "http://www.theforever.net",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 69,
+    "fields": {
+        "original_id": 69,
+        "name": "어게인",
+        "location": "인천광역시 서구 원당대로",
+        "contact": "032-566-1936",
+        "link": "",
+        "tag": "EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 70,
+    "fields": {
+        "original_id": 70,
+        "name": "대구러브펫",
+        "location": "대구 달서구 장동",
+        "contact": "053-593-4900",
+        "link": "http://dglovepet.kr",
+        "tag": "FU"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 71,
+    "fields": {
+        "original_id": 71,
+        "name": "센트럴파크(주)",
+        "location": "부산광역시 기장군 일광면 차양길",
+        "contact": "051-728-5411",
+        "link": "http://www.startice.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 72,
+    "fields": {
+        "original_id": 72,
+        "name": "파트라슈",
+        "location": "부산 기장군 장안읍 좌동리",
+        "contact": "051-723-2201",
+        "link": "http://www.mypatrasche.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 73,
+    "fields": {
+        "original_id": 73,
+        "name": "아이별",
+        "location": "부산광역시 기장군 장안읍 기룡길",
+        "contact": "051-727-4499",
+        "link": "http://www.aistar.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 74,
+    "fields": {
+        "original_id": 74,
+        "name": "포포즈 반려동물 장례식장 세종점",
+        "location": "세종시 부강로 시목부강로",
+        "contact": "1588-2888",
+        "link": "http://fourpaws.co.kr",
+        "tag": "FU,CR,EN"
+    }
+},
+{
+    "model": "funeralhalls.funeralhall",
+    "pk": 75,
+    "fields": {
+        "original_id": 75,
+        "name": "펫포유",
+        "location": "세종특별자치시 장군면 금암리",
+        "contact": "1533-4426",
+        "link": "http://www.petforyou.kr",
+        "tag": "FU,CR,EN"
+    }
+}
+]
