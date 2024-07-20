@@ -39,10 +39,7 @@ class RegisterSerializer(serializers.Serializer):
 
 class PetSerializer(serializers.ModelSerializer):
     pet_user = serializers.ReadOnlyField(source = 'pet_user.nickname')
-
-    pet_birth = serializers.DateField(format="%Y.%m.%d")
-    pet_anniv = serializers.DateField(format="%Y.%m.%d")
-
+    
     class Meta:
         model = PetInfo
-        fields = ['id', 'pet_name', 'pet_birth', 'pet_anniv', 'pet_user']
+        fields = ['id', 'pet_name', 'pet_birth', 'pet_anniv', 'pet_image', 'pet_user']

@@ -7,7 +7,7 @@ class Book(models.Model):
     title = models.CharField(max_length=128)
     pet = models.OneToOneField(PetInfo, on_delete=models.CASCADE, related_name='pet_book')
     author = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='my_books')
-    description = models.CharField(max_length=100, default='')
+    description = models.CharField(max_length=100, blank=True, null=True)
     cover = models.ImageField(blank=True, null=True, upload_to='book_covers')
     last_updated = models.DateField(null=True)
     mind =  models.ManyToManyField(UserInfo, related_name="mind_books")
