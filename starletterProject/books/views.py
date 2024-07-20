@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -61,3 +61,49 @@ class MyBookListView(APIView):
             )
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+# 내 서재 - Detail (페이지 + 포스트잇 GET, 새 페이지 POST)
+class MyBookDetailView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, pk):
+        userinfo = self.request.user.userinfo
+
+        book = Book.objects.get(pk=pk)
+        book_serializer = BookSerializer(book)
+
+        pages = Page.objects.filter(book=book)
+        pages_serializer = PageSerializer(pages, many=True)
+
+        notes = Note.objects.filter(book=book)
+        notes_serializer = NoteSerializer(notes, many=True)
+
+        return Response({
+            'book': book_serializer.data,
+            'pages': pages_serializer.data,
+            'notes': notes_serializer.data
+        }, status=status.HTTP_200_OK)
+    
+    def post(self, request, pk):
+        book = Book.objects.get(pk=pk)
+        page_serializer = PageSerializer(data=request.data, context={'request': request})
+
+        if page_serializer.is_valid():
+            page_serializer.save(
+                book=book,
+                author=self.request.user.userinfo,
+            )
+            return Response(page_serializer.data, status=status.HTTP_201_CREATED)
+        return Response(page_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# 공감하기
+class MindView(APIView):
+    def post(self, request, pk):
+        book = get_object_or_404(Book, pk=pk)
+        if request.user.userinfo in book.mind.all():
+            book.mind.remove(request.user.userinfo)
+            return Response("취소하기", status=status.HTTP_200_OK)
+        else:
+            book.mind.add(request.user.userinfo)
+            return Response("공감하기", status=status.HTTP_200_OK)

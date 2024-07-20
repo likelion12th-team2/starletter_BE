@@ -16,11 +16,11 @@ class BookSerializer(ModelSerializer):
 
 
 class PageImageSerializer(serializers.ModelSerializer):
-    image = serializers.ImageField(use_url=True)
+    images = serializers.ImageField(use_url=True)
 
     class Meta:
         model = PageImage
-        fields = ['image']
+        fields = ['images']
 
 
 class PageSerializer(serializers.ModelSerializer):
@@ -28,18 +28,18 @@ class PageSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
 
     def get_images(self, obj):
-        image = obj.image.all() 
-        return PageImageSerializer(instance=image, many=True, context=self.context).data
+        images = obj.images.all() 
+        return PageImageSerializer(instance=images, many=True, context=self.context).data
 
     class Meta:
         model = Page
-        fields = [ 'id', 'book', 'author', 'body', 'created_at', 'is_public' ]
+        fields = [ 'id', 'book', 'author', 'body', 'created_at', 'is_public', 'images' ]
 
     def create(self, validated_data):
         instance = Page.objects.create(**validated_data)
         image_set = self.context['request'].FILES
-        for image_data in image_set.getlist('image'):
-            PageImage.objects.create(post=instance, image=image_data)
+        for image_data in image_set.getlist('images'):
+            PageImage.objects.create(page=instance, images=image_data)
         return instance
     
 
