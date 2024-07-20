@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 
+from datetime import date
 from accounts.models import PetInfo
 from accounts.serializers import PetSerializer
 from .models import *
@@ -58,17 +59,17 @@ class MyBookListView(APIView):
         if serializer.is_valid():
             serializer.save(
                 author=self.request.user.userinfo,
+                last_updated=date.today()
             )
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
+
 # 내 서재 - Detail (페이지 + 포스트잇 GET, 새 페이지 POST)
 class MyBookDetailView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, pk):
-        userinfo = self.request.user.userinfo
-
         book = Book.objects.get(pk=pk)
         book_serializer = BookSerializer(book)
 
@@ -85,7 +86,7 @@ class MyBookDetailView(APIView):
         }, status=status.HTTP_200_OK)
     
     def post(self, request, pk):
-        book = Book.objects.get(pk=pk)
+        book = Book.objects.get(id=pk)
         page_serializer = PageSerializer(data=request.data, context={'request': request})
 
         if page_serializer.is_valid():
@@ -93,12 +94,16 @@ class MyBookDetailView(APIView):
                 book=book,
                 author=self.request.user.userinfo,
             )
+            book.last_updated = page_serializer.data['created_at']
+            book.save(update_fields=['last_updated'])
             return Response(page_serializer.data, status=status.HTTP_201_CREATED)
         return Response(page_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 # 공감하기
 class MindView(APIView):
+    permission_classes = [IsAuthenticated]
+
     def post(self, request, pk):
         book = get_object_or_404(Book, pk=pk)
         if request.user.userinfo in book.mind.all():

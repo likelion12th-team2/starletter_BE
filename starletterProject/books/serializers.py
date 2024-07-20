@@ -24,6 +24,7 @@ class PageImageSerializer(serializers.ModelSerializer):
 
 
 class PageSerializer(serializers.ModelSerializer):
+    book = serializers.ReadOnlyField(source = 'book.title')
     author = serializers.ReadOnlyField(source = 'author.username')
     images = serializers.SerializerMethodField()
 
