@@ -51,13 +51,13 @@ def get_funeralhall_data():
             for tag in raw_tags:
                 tag = tag.strip()
                 if tag == '장례':
-                    tags.append('FU')
+                    tags.append('장례')
                 elif tag == '화장':
-                    tags.append('CR')
+                    tags.append('화장')
                 elif tag == '봉안':
-                    tags.append('EN')
+                    tags.append('봉안')
                 elif tag == '건조':
-                    tags.append('DR')
+                    tags.append('건조')
 
             item_obj = {
                 'original_id' : original_id,

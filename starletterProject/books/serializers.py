@@ -2,11 +2,17 @@ from rest_framework.serializers import ModelSerializer
 from rest_framework import serializers
 from .models import *
 
+
 class BookSerializer(ModelSerializer):
-    author = serializers.ReadOnlyField(source = 'author.username')
+    author = serializers.ReadOnlyField(source = 'author.nickname')
+
     class Meta:
         model = Book
-        fields = ['id', 'title', 'pet', 'author', 'description', 'cover', 'last_updated']
+        fields = ['id', 'title', 'pet', 'author', 'description', 'cover', 'last_updated', 'keyword_tag']
+
+    def create(self, validated_data):
+        book = Book.objects.create(**validated_data)
+        return book
 
 
 class PageImageSerializer(serializers.ModelSerializer):
