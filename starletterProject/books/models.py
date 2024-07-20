@@ -9,7 +9,7 @@ class Book(models.Model):
     author = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='my_books')
     description = models.CharField(max_length=100, default='')
     cover = models.ImageField(blank=True, null=True, upload_to='book_covers')
-    last_updated = models.DateField(null=True, auto_now_add=True)
+    last_updated = models.DateField(null=True)
     mind =  models.ManyToManyField(UserInfo, related_name="mind_books")
 
     KEYWORD_CHOICES = (
@@ -18,7 +18,7 @@ class Book(models.Model):
         ('일상', '일상'),
         ('편지', '편지')
     )
-    keyword_tag = MultiSelectField(choices=KEYWORD_CHOICES)
+    keyword_tag = models.CharField(max_length=10, choices=KEYWORD_CHOICES)
 
     def __str__(self):
         return self.title
@@ -32,7 +32,7 @@ class Page(models.Model):
     is_public = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.body
+        return f'{self.id} - {self.book.title}'
     
 def page_image_upload_path(instance, filename):
     return f'page_images/{instance.page.id}/{filename}'
