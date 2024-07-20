@@ -19,5 +19,13 @@ class PetInfo(models.Model):
     pet_image = models.ImageField(null=True, blank=True, upload_to='pet_images')
     pet_user = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='my_pets', null=True)
 
+    TYPE_CHOICES = (
+        ('강아지', '강아지'),
+        ('고양이', '고양이'),
+        ('소동물', '소동물'),
+        ('기타', '기타')
+    )
+    pet_type = models.CharField(max_length=5, null=True, choices=TYPE_CHOICES)
+
     def __str__(self):
         return self.pet_name

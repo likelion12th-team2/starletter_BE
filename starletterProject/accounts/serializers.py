@@ -42,4 +42,4 @@ class PetSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = PetInfo
-        fields = ['id', 'pet_name', 'pet_birth', 'pet_anniv', 'pet_image', 'pet_user']
+        fields = '__all__'
