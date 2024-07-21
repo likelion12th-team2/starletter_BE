@@ -1,10 +1,9 @@
-from rest_framework import viewsets, status
+from rest_framework import views, viewsets, status
 from rest_framework.response import Response
-from rest_framework.viewsets import ModelViewSet 
 from rest_framework.permissions import IsAuthenticated
 
-from .models import PetInfo
-from .serializers import RegisterSerializer, PetSerializer
+from .models import PetInfo, UserInfo
+from .serializers import RegisterSerializer, UserInfoSerializer, PetSerializer
 
 
 class RegisterViewSet(viewsets.ViewSet):
@@ -30,7 +29,27 @@ class RegisterViewSet(viewsets.ViewSet):
                 return Response({'option':3, 'message':error_message}, status=status.HTTP_400_BAD_REQUEST)
     
 
-class MyPetViewSet(ModelViewSet):
+class MyInfoViewSet(views.APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = self.request.user
+        userinfo = UserInfo.objects.get(user=user)
+        serializer = UserInfoSerializer(userinfo)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    def put(self, request):
+        user = self.request.user
+        userinfo = UserInfo.objects.get(user=user)
+        serializer = UserInfoSerializer(userinfo, data=request.data)
+        if serializer.is_valid():
+            serializer.save(user=self.request.user)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response({'error_message':'이미 사용 중인 닉네임입니다.'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class MyPetViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = PetInfo.objects.all()
     serializer_class = PetSerializer
@@ -40,5 +59,13 @@ class MyPetViewSet(ModelViewSet):
         return self.queryset.filter(pet_user=pet_user)
     
     def perform_create(self, serializer):
+        pet_user = self.request.user.userinfo
+        serializer.save(pet_user=pet_user)
+
+    def perform_update(self, serializer):
+        if 'pet_image' in self.request.data and self.request.data['pet_image'] == '':
+            instance = serializer.instance
+            instance.pet_image.delete(save=False)
+            serializer.validated_data['pet_image'] = None
         pet_user = self.request.user.userinfo
         serializer.save(pet_user=pet_user)
