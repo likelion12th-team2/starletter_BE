@@ -51,7 +51,7 @@ class UserInfoSerializer(serializers.ModelSerializer):
 
 class PetSerializer(serializers.ModelSerializer):
     pet_user = serializers.ReadOnlyField(source = 'pet_user.nickname')
-    pet_image = serializers.ImageField(use_url=True)
+    pet_image = serializers.ImageField(use_url=True, required=False, allow_empty_file=True)
     
     class Meta:
         model = PetInfo

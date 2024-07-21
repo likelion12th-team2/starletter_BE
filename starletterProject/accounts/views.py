@@ -61,3 +61,11 @@ class MyPetViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         pet_user = self.request.user.userinfo
         serializer.save(pet_user=pet_user)
+
+    def perform_update(self, serializer):
+        if 'pet_image' in self.request.data and self.request.data['pet_image'] == '':
+            instance = serializer.instance
+            instance.pet_image.delete(save=False)
+            serializer.validated_data['pet_image'] = None
+        pet_user = self.request.user.userinfo
+        serializer.save(pet_user=pet_user)
