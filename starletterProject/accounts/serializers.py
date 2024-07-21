@@ -37,6 +37,18 @@ class RegisterSerializer(serializers.Serializer):
         return user, user_info
     
 
+class UserInfoSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source='user.username')
+    nickname = serializers.CharField(
+        max_length=100,
+        required=True,
+        validators=[UniqueValidator(queryset=UserInfo.objects.all())]
+    )
+    class Meta:
+        model = UserInfo
+        fields = '__all__'
+
+
 class PetSerializer(serializers.ModelSerializer):
     pet_user = serializers.ReadOnlyField(source = 'pet_user.nickname')
     pet_image = serializers.ImageField(use_url=True)
