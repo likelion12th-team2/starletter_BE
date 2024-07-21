@@ -39,6 +39,7 @@ class RegisterSerializer(serializers.Serializer):
 
 class PetSerializer(serializers.ModelSerializer):
     pet_user = serializers.ReadOnlyField(source = 'pet_user.nickname')
+    pet_image = serializers.ImageField(use_url=True)
     
     class Meta:
         model = PetInfo

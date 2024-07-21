@@ -5,6 +5,7 @@ from .models import *
 
 class BookSerializer(ModelSerializer):
     author = serializers.ReadOnlyField(source = 'author.nickname')
+    cover = serializers.ImageField(use_url=True)
 
     class Meta:
         model = Book

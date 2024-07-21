@@ -27,7 +27,7 @@ class MyBookNoPetView(APIView):
     def get(self, reqeust):
         return Response(status=status.HTTP_204_NO_CONTENT)
     def post(self, request):
-        serializer = PetSerializer(data=request.data)
+        serializer = PetSerializer(data=request.data, context={'request': request})
         pet_user = self.request.user.userinfo
         if serializer.is_valid(): 
             serializer.save(pet_user=pet_user) 
@@ -46,8 +46,8 @@ class MyBookListView(APIView):
         pet_books = [pet.pet_book for pet in pets_with_book]
         pets_no_book = my_pets.filter(pet_book__isnull=True)
 
-        with_serializer = BookSerializer(pet_books, many=True)
-        no_serializer = PetSerializer(pets_no_book, many=True)
+        with_serializer = BookSerializer(pet_books, many=True, context={'request': request})
+        no_serializer = PetSerializer(pets_no_book, many=True, context={'request': request})
 
         return Response({
             'books': with_serializer.data,
@@ -55,7 +55,7 @@ class MyBookListView(APIView):
         }, status=status.HTTP_200_OK)
     
     def post(self, request):
-        serializer = BookSerializer(data=request.data)
+        serializer = BookSerializer(data=request.data, context={'request': request})
         if serializer.is_valid():
             serializer.save(
                 author=self.request.user.userinfo,
@@ -71,10 +71,10 @@ class MyBookDetailView(APIView):
 
     def get(self, request, pk):
         book = Book.objects.get(pk=pk)
-        book_serializer = BookSerializer(book)
+        book_serializer = BookSerializer(book, context={'request': request})
 
         pages = Page.objects.filter(book=book)
-        pages_serializer = PageSerializer(pages, many=True)
+        pages_serializer = PageSerializer(pages, many=True, context={'request': request})
 
         notes = Note.objects.filter(book=book)
         notes_serializer = NoteSerializer(notes, many=True)
