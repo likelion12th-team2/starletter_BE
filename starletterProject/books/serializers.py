@@ -5,7 +5,7 @@ from .models import *
 
 class BookSerializer(ModelSerializer):
     author = serializers.ReadOnlyField(source = 'author.nickname')
-    cover = serializers.ImageField(use_url=True)
+    cover = serializers.ImageField(use_url=True, required=False, allow_empty_file=True)
 
     class Meta:
         model = Book
@@ -46,12 +46,14 @@ class PageSerializer(serializers.ModelSerializer):
     
 
 class NoteSerializer(ModelSerializer):
-    author = serializers.ReadOnlyField(source = 'author.username')
+    book = serializers.ReadOnlyField(source = 'book.title')
+    author = serializers.ReadOnlyField(source = 'author.nickname')
     class Meta:
-        models = Note
-        fields = [ 'id', 'book', 'author', 'body' ]
+        model = Note
+        fields = '__all__'
 
 
+'''
 # 공감하기
 class BookMindSerializer(serializers.ModelSerializer):
     user = serializers.SerializerMethodField()
@@ -63,3 +65,4 @@ class BookMindSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = [ 'id', 'user', 'minds' ]
+'''
