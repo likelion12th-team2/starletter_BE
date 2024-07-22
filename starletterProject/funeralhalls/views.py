@@ -14,7 +14,6 @@ class FnrHallViewSet(viewsets.ModelViewSet):
         if self.request.query_params:
             search_keyword = self.request.GET['search']
             words = search_keyword.split(' ')
-            print(words)
             queryset = self.queryset.filter(
                 Q(name__icontains=words[0]) | Q(location__icontains=words[0]) | Q(tag__icontains=words[0])
             )
