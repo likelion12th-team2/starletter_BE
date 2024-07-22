@@ -19,11 +19,13 @@ class BookShelfView(APIView):
             search_keyword = self.request.GET['search']
             words = search_keyword.split(' ')
             queryset = queryset.filter(
-                Q(author__nickname__icontains=words[0]) | Q(keyword_tag__icontains=words[0]) | Q(title__icontains=words[0])
+                Q(author__nickname__icontains=words[0]) | Q(keyword_tag__icontains=words[0]) 
+                | Q(title__icontains=words[0]) | Q(pet__pet_type__icontains=words[0])
             )
             for word in words[1:]:
                 queryset = queryset.filter(
-                    Q(author__nickname__icontains=word) | Q(keyword_tag__icontains=word) | Q(title__icontains=word)
+                    Q(author__nickname__icontains=word) | Q(keyword_tag__icontains=word) 
+                    | Q(title__icontains=word) | Q(pet__pet_type__icontains=word)
                 )
             queryset = queryset.distinct()
             serializer = BookSerializer(queryset, many=True, context={'request': request})
@@ -62,9 +64,15 @@ class BookPageView(APIView):
         notes = Note.objects.filter(book=book)
         notes_serializer = NoteSerializer(notes, many=True)
 
+        if userinfo == AnonymousUser:
+            is_minded = False
+        else:
+            is_minded = userinfo in book.mind.all()
+
         return Response({
             'pages': pages_serializer.data,
-            'notes': notes_serializer.data
+            'notes': notes_serializer.data,
+            'is_minded': is_minded
         }, status=status.HTTP_200_OK)
     
     def post(self, request, pk): # 포스트잇 POST
