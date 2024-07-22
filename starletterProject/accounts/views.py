@@ -4,6 +4,8 @@ from rest_framework.permissions import IsAuthenticated
 
 from .models import PetInfo, UserInfo
 from .serializers import RegisterSerializer, UserInfoSerializer, PetSerializer
+from books.models import Note
+from books.serializers import BookSerializer, NoteSerializer
 
 
 class RegisterViewSet(viewsets.ViewSet):
@@ -69,3 +71,23 @@ class MyPetViewSet(viewsets.ModelViewSet):
             serializer.validated_data['pet_image'] = None
         pet_user = self.request.user.userinfo
         serializer.save(pet_user=pet_user)
+
+
+class MyActivityView(views.APIView):
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request):
+        userinfo = self.request.user.userinfo
+        books = userinfo.mind_books.all()
+        book_serializer = BookSerializer(books, many=True, context={'request': request})
+        notes = Note.objects.filter(author=userinfo).order_by('-id')
+        note_serializer = NoteSerializer(notes, many=True)
+        return Response({
+                'mind_books': book_serializer.data,
+                'my_notes': note_serializer.data
+            }, status=status.HTTP_200_OK)
+
+    def delete(self, request):
+        note = Note.objects.get(id=request.data['note_id'])
+        note.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
