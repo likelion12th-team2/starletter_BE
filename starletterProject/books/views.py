@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 
-from datetime import date
+from datetime import datetime
 from accounts.models import PetInfo
 from accounts.serializers import PetSerializer
 from .models import *
@@ -59,7 +59,7 @@ class MyBookListView(APIView):
         if serializer.is_valid():
             serializer.save(
                 author=self.request.user.userinfo,
-                last_updated=date.today()
+                last_updated=datetime.now()
             )
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -93,22 +93,9 @@ class MyBookDetailView(APIView):
             page_serializer.save(
                 book=book,
                 author=self.request.user.userinfo,
+                created_at=datetime.now()
             )
-            book.last_updated = page_serializer.data['created_at']
+            book.last_updated = datetime.now()
             book.save(update_fields=['last_updated'])
             return Response(page_serializer.data, status=status.HTTP_201_CREATED)
         return Response(page_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-# 공감하기
-class MindView(APIView):
-    permission_classes = [IsAuthenticated]
-
-    def post(self, request, pk):
-        book = get_object_or_404(Book, pk=pk)
-        if request.user.userinfo in book.mind.all():
-            book.mind.remove(request.user.userinfo)
-            return Response("취소하기", status=status.HTTP_200_OK)
-        else:
-            book.mind.add(request.user.userinfo)
-            return Response("공감하기", status=status.HTTP_200_OK)

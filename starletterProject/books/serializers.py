@@ -6,6 +6,7 @@ from .models import *
 class BookSerializer(ModelSerializer):
     author = serializers.ReadOnlyField(source = 'author.nickname')
     cover = serializers.ImageField(use_url=True, required=False, allow_empty_file=True)
+    last_updated = serializers.DateTimeField(required=False, format='%Y-%m-%d')
 
     class Meta:
         model = Book
@@ -27,6 +28,7 @@ class PageImageSerializer(serializers.ModelSerializer):
 class PageSerializer(serializers.ModelSerializer):
     book = serializers.ReadOnlyField(source = 'book.title')
     author = serializers.ReadOnlyField(source = 'author.username')
+    created_at = serializers.DateTimeField(required=False, format='%Y-%m-%d')
     images = serializers.SerializerMethodField()
 
     def get_images(self, obj):
