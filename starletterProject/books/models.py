@@ -9,7 +9,7 @@ class Book(models.Model):
     author = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='my_books')
     description = models.CharField(max_length=100, blank=True, null=True)
     cover = models.ImageField(blank=True, null=True, upload_to='book_covers')
-    last_updated = models.DateField(null=True)
+    last_updated = models.DateTimeField(null=True)
     mind =  models.ManyToManyField(UserInfo, related_name="mind_books")
 
     KEYWORD_CHOICES = (
@@ -28,7 +28,7 @@ class Page(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='pages')
     author = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='my_pages')
     body = models.TextField(default='')
-    created_at = models.DateField(auto_now_add=True)
+    created_at = models.DateTimeField(null=True)
     is_public = models.BooleanField(default=True)
 
     def __str__(self):
@@ -51,11 +51,5 @@ class Note(models.Model):
     body = models.CharField(max_length=500, default='')
 
     def __str__(self):
-        return self.body
+        return f'{self.body} - {self.book.title}'
     
-'''
-class Mind(models.Model): # 공감하기
-    book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='book_minds')
-    user = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='user_minds')
-    created_at = models.DateTimeField(auto_now_add=True) # 시간순으로 정렬할라고
-'''
