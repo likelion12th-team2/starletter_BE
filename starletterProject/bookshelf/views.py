@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.db.models import Q, Count
+from django.db.models import Q, Count, Exists, OuterRef
 from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth.models import AnonymousUser
 from rest_framework.response import Response
@@ -15,7 +15,10 @@ from books.serializers import *
 class BookShelfView(APIView):
     def get(self, request):
         if self.request.query_params: # 검색한 경우
-            queryset = Book.objects.all()
+            queryset = Book.objects.annotate(
+                has_public_pages=Exists(Page.objects.filter(book=OuterRef('id'), is_public=True))
+            ).filter(has_public_pages=True)
+
             search_keyword = self.request.GET['search']
             words = search_keyword.split(' ')
             queryset = queryset.filter(
@@ -27,12 +30,18 @@ class BookShelfView(APIView):
                     Q(author__nickname__icontains=word) | Q(keyword_tag__icontains=word) 
                     | Q(title__icontains=word) | Q(pet__pet_type__icontains=word)
                 )
+
             queryset = queryset.distinct()
             serializer = BookSerializer(queryset, many=True, context={'request': request})
             return Response({'searched_books': serializer.data}, status=status.HTTP_200_OK)
+        
         else: # 검색하지 않은 경우 
-            books_most_minds = Book.objects.annotate(minds=Count('mind')).order_by('-minds')[:5]
-            books_recent = Book.objects.order_by('-last_updated')[:5]
+            queryset = Book.objects.annotate(
+                has_public_pages=Exists(Page.objects.filter(book=OuterRef('id'), is_public=True))
+            ).filter(has_public_pages=True)
+            
+            books_most_minds = queryset.annotate(minds=Count('mind')).order_by('-minds')[:5]
+            books_recent = queryset.order_by('-last_updated')[:5]
 
             bmm_serializer = BookSerializer(books_most_minds, many=True, context={'request': request})
             br_serializer = BookSerializer(books_recent, many=True, context={'request': request})
