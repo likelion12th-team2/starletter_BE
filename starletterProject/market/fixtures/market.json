@@ -108,12 +108,12 @@
         "pk": 9,
         "fields": {
             "original_id": 9,
-            "name": "반려동물 별자리액자 💫",
-            "discount": null,
-            "before_discount": null,
-            "price": 36000,
-            "image": "https://image.idus.com/image/files/0bed79fde54649b087d09ed7c4d421ad_400.jpg",
-            "link": "https://www.idus.com/v2/product/79bc4111-fcbf-49e2-a039-81a3ba6b750a?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+            "name": "[반려동물 위패 특가] 크리스탈 봉안당 납골당",
+            "discount": 45,
+            "before_discount": 110000,
+            "price": 60000,
+            "image": "https://image.idus.com/image/files/f9e5ebac7dba467ea038c380cc2df02f_400.jpg",
+            "link": "https://www.idus.com/v2/product/e41e28ba-5066-45ba-9d14-071876f2be3a?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
         }
     },
     {
