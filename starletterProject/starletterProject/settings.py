@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'funeralhalls',
     'bookshelf',
     'market',
+    'index',
 ]
 
 MIDDLEWARE = [
