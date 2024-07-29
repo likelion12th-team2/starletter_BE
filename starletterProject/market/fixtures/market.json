@@ -1,0 +1,262 @@
+[
+    {
+        "model": "market.market",
+        "pk": 1,
+        "fields": {
+            "original_id": 1,
+            "name": "반려동물 별자리액자 💫",
+            "discount": null,
+            "before_discount": null,
+            "price": 36000,
+            "image": "https://image.idus.com/image/files/0bed79fde54649b087d09ed7c4d421ad_400.jpg",
+            "link": "https://www.idus.com/v2/product/79bc4111-fcbf-49e2-a039-81a3ba6b750a?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 2,
+        "fields": {
+            "original_id": 2,
+            "name": "반려동물 가족 추모 액자 금속위패 현판",
+            "discount": 56,
+            "before_discount": 65900,
+            "price": 29000,
+            "image": "https://image.idus.com/image/files/c6d4537c4bbe4023828fde4ea5423b94_400.jpg",
+            "link": "https://www.idus.com/v2/product/c6280dd5-7384-451d-8910-0dfc87318171?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 3,
+        "fields": {
+            "original_id": 3,
+            "name": "반려동물 음식한상 꾸미기 💙 미니어처 모형 🐶🐱",
+            "discount": null,
+            "before_discount": null,
+            "price": 2000,
+            "image": "https://image.idus.com/image/files/0abf041ef9ae4e0aaa46b62151506163_400.jpg",
+            "link": "https://www.idus.com/v2/product/f9270089-685a-4ba1-b363-819a43914d4b?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 4,
+        "fields": {
+            "original_id": 4,
+            "name": "사진1+1 강아지 고양이 털 수염보관 메모리얼 유리병",
+            "discount": 38,
+            "before_discount": 15900,
+            "price": 9900,
+            "image": "https://image.idus.com/image/files/5045609ce0f44994bf9b0ad15a71a53c_400.jpg",
+            "link": "https://www.idus.com/v2/product/186395a0-ba13-4f8a-9a85-7633d74da492?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 5,
+        "fields": {
+            "original_id": 5,
+            "name": "🐶반려동물 메모리얼 털목걸이 만들기 DIY 키트",
+            "discount": 25,
+            "before_discount": 39800,
+            "price": 29900,
+            "image": "https://image.idus.com/image/files/9d5be64b5ed94d30a41c8b778827cab7_400.jpg",
+            "link": "https://www.idus.com/v2/product/171a7a21-14c4-48d9-901a-ff95d47e44b9?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 6,
+        "fields": {
+            "original_id": 6,
+            "name": "반려동물 강아지고양이😻 털보관 유리볼  팔찌 키링",
+            "discount": 23,
+            "before_discount": 12800,
+            "price": 9900,
+            "image": "https://image.idus.com/image/files/e12888b1eb174afdbf0ccb2c008dda99_400.jpg",
+            "link": "https://www.idus.com/v2/product/30da5937-cb15-4e5a-ab96-804a4cc59524?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 7,
+        "fields": {
+            "original_id": 7,
+            "name": "🌈반려동물 추모 무지개 일러스트 그림 선물",
+            "discount": 14,
+            "before_discount": 15000,
+            "price": 12900,
+            "image": "https://image.idus.com/image/files/05c1c17595674c108b81a53dd00ec07b_400.jpg",
+            "link": "https://www.idus.com/v2/product/52469b58-4b8b-4d06-92b6-ae043c77444f?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 8,
+        "fields": {
+            "original_id": 8,
+            "name": "반려동물 조립추모함 v2 아크릴 상자 납골당 유골함",
+            "discount": null,
+            "before_discount": null,
+            "price": 41000,
+            "image": "https://image.idus.com/image/files/8a06640e9a6b4607b3e7dcee711dcff5_400.jpg",
+            "link": "https://www.idus.com/v2/product/4b2ea768-b97a-4122-a1ff-611799301fac?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 9,
+        "fields": {
+            "original_id": 9,
+            "name": "[반려동물 위패 특가] 크리스탈 봉안당 납골당",
+            "discount": 45,
+            "before_discount": 110000,
+            "price": 60000,
+            "image": "https://image.idus.com/image/files/f9e5ebac7dba467ea038c380cc2df02f_400.jpg",
+            "link": "https://www.idus.com/v2/product/e41e28ba-5066-45ba-9d14-071876f2be3a?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 10,
+        "fields": {
+            "original_id": 10,
+            "name": "댕댕이 정원🌸(반려견 미니어처전용)",
+            "discount": null,
+            "before_discount": null,
+            "price": 5000,
+            "image": "https://image.idus.com/image/files/280bd93914fb4d5985b48d0762ba9109_400.jpg",
+            "link": "https://www.idus.com/v2/product/2b077f7c-a7be-4383-b293-5f1260b561bf?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 11,
+        "fields": {
+            "original_id": 11,
+            "name": "메모리얼스톤 보관함 반려동물 추모함",
+            "discount": null,
+            "before_discount": null,
+            "price": 61000,
+            "image": "https://image.idus.com/image/files/721b5a83559e4d1b95dd4f6dde6040fc_400.jpg",
+            "link": "https://www.idus.com/v2/product/37e6ce42-8e98-4481-bcb0-fb0af5db793a?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 12,
+        "fields": {
+            "original_id": 12,
+            "name": "💕반려동물 초상화 일러스트(커스터메이드)💕",
+            "discount": null,
+            "before_discount": null,
+            "price": 45000,
+            "image": "https://image.idus.com/image/files/8d76048d1a784096aa1c86c177908530_400.jpg",
+            "link": "https://www.idus.com/v2/product/157fe072-7315-443f-9f4a-b6ef6294f8c4?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 13,
+        "fields": {
+            "original_id": 13,
+            "name": "[24년 하반기 예약]  반려견액자",
+            "discount": null,
+            "before_discount": null,
+            "price": 170000,
+            "image": "https://image.idus.com/image/files/c70783c7c017453995b2cd8abaafc8e3_400.jpg",
+            "link": "https://www.idus.com/v2/product/655f489f-8f2b-474d-991d-c9ca57e49325?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 14,
+        "fields": {
+            "original_id": 14,
+            "name": "[우리 고양이, 강아지] 손 조각 맞춤 원목 액자",
+            "discount": null,
+            "before_discount": null,
+            "price": 39000,
+            "image": "https://image.idus.com/image/files/268b2bec93d943ffaaf61d3a0af503b6_400.jpg",
+            "link": "https://www.idus.com/v2/product/7d1d1bbf-fa90-45a8-85a4-712227bf58a8?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 15,
+        "fields": {
+            "original_id": 15,
+            "name": "반려동물 해노 추모함 사선 아크릴 상자 납골당 유골함",
+            "discount": null,
+            "before_discount": null,
+            "price": 42000,
+            "image": "https://image.idus.com/image/files/848c1d72dcdd45e88b798a780917ab3e_400.jpg",
+            "link": "https://www.idus.com/v2/product/df2d6b78-3564-4fab-bddb-f8a9d12d2a71?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 16,
+        "fields": {
+            "original_id": 16,
+            "name": "반려동물 조립추모함 v3 아크릴 상자 납골당 유골함",
+            "discount": null,
+            "before_discount": null,
+            "price": 46000,
+            "image": "https://image.idus.com/image/files/66b904c14dd54238b78bdb0105b855ff_400.jpg",
+            "link": "https://www.idus.com/v2/product/187ddeb0-cd8b-4523-8e25-32ba15aea41c?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 17,
+        "fields": {
+            "original_id": 17,
+            "name": "강아지 밀폐 원목유골함 조명보관대 고양이 아크릴 추모대",
+            "discount": 52,
+            "before_discount": 100000,
+            "price": 48000,
+            "image": "https://image.idus.com/image/files/ac8b64e7049a41fdb21ecc0c24f864a9_400.jpg",
+            "link": "https://www.idus.com/v2/product/81b06032-2ca6-43e4-9e85-ecb11d538880?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 18,
+        "fields": {
+            "original_id": 18,
+            "name": "🐶반려동물 메모리얼 글라스 목걸이_털,유치,유골 보관",
+            "discount": 34,
+            "before_discount": 33100,
+            "price": 21900,
+            "image": "https://image.idus.com/image/files/e09e03afc2374cd8b5678cfa3dcb1754_400.jpg",
+            "link": "https://www.idus.com/v2/product/d028949f-13ca-4b5f-a12e-f1f9b09dd3e0?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 19,
+        "fields": {
+            "original_id": 19,
+            "name": "고퀄리티 반려동물 초상화💖화이트액자",
+            "discount": 25,
+            "before_discount": 65300,
+            "price": 49000,
+            "image": "https://image.idus.com/image/files/5ccc2199ecf54e579ba3189ec83b1a3f_400.jpg",
+            "link": "https://www.idus.com/v2/product/9a6cc4ca-f9e9-4e8a-b174-6234c1933bd6?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    },
+    {
+        "model": "market.market",
+        "pk": 20,
+        "fields": {
+            "original_id": 20,
+            "name": "반려동물 3D액자🐾 하랑별펫기프트세트",
+            "discount": 10,
+            "before_discount": 91100,
+            "price": 82000,
+            "image": "https://image.idus.com/image/files/e6f8e41085174b22b6a605dbb451e0f5_400.jpg",
+            "link": "https://www.idus.com/v2/product/6123dab7-573e-4654-8c16-1537f54f0c01?search_word=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B6%94%EB%AA%A8&keyword_channel=user"
+        }
+    }
+]
