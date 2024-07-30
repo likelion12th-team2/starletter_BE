@@ -17,6 +17,7 @@ class RegisterSerializer(serializers.Serializer):
         required=True,
         validators=[validate_password], # 비밀번호 형식 체크 
     )
+    email = serializers.EmailField()
     name = serializers.CharField(max_length=30, required=True)
     nickname = serializers.CharField(
         max_length=100,
@@ -27,7 +28,8 @@ class RegisterSerializer(serializers.Serializer):
     def create(self, validated_data):
         user = User.objects.create_user(
             username=validated_data['username'],
-            password=validated_data['password']
+            password=validated_data['password'],
+            email=validated_data['email']
         )
         user_info = UserInfo.objects.create(
             user=user,

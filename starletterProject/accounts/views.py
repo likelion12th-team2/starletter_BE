@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 
 from .models import PetInfo, UserInfo
-from .serializers import RegisterSerializer, UserInfoSerializer, PetSerializer
+from .serializers import *
 from books.models import Note
 from books.serializers import BookSerializer, NoteSerializer
 
@@ -26,9 +26,15 @@ class RegisterViewSet(viewsets.ViewSet):
             elif 'username' in error_dict:
                 error_message = '이미 사용 중인 아이디입니다.'
                 return Response({'option':2, 'message':error_message}, status=status.HTTP_400_BAD_REQUEST)
-            else:
+            elif 'nickname' in error_dict:
                 error_message = '이미 사용 중인 닉네임입니다.'
                 return Response({'option':3, 'message':error_message}, status=status.HTTP_400_BAD_REQUEST)
+            elif 'email' in error_dict:
+                error_message = '유효한 이메일을 입력하세요.'
+                return Response({'option':4, 'message':error_message}, status=status.HTTP_400_BAD_REQUEST)
+            else:
+                error_message = error_dict['password'][0] # 비밀번호 관련 
+                return Response({'option':5, 'message':error_message}, status=status.HTTP_400_BAD_REQUEST)
     
 
 class MyInfoViewSet(views.APIView):
