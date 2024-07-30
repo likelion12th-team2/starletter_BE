@@ -53,18 +53,3 @@ class NoteSerializer(ModelSerializer):
     class Meta:
         model = Note
         fields = '__all__'
-
-
-'''
-# 공감하기
-class BookMindSerializer(serializers.ModelSerializer):
-    user = serializers.SerializerMethodField()
-    minds = serializers.StringRelatedField(many=True)
-
-    def get_user(self, obj):
-        return obj.user.username
-
-    class Meta:
-        model = Book
-        fields = [ 'id', 'user', 'minds' ]
-'''
