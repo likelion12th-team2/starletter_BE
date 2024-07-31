@@ -24,7 +24,7 @@ from index.views import IndexView
 
 urlpatterns = [
     path('', IndexView.as_view()),
-    path('admin/', admin.site.urls),
+    path('gysuths4/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('mybooks/', include('books.urls')),
     path('funeralhalls/', include('funeralhalls.urls')),
