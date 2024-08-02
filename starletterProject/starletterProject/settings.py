@@ -144,11 +144,11 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME' : 'hackathon', 
-        'USER' : 'hackathon', # DB User
-        'PASSWORD' : 'hackathon', # Password
-        'HOST': '13.124.168.131',
-        'PORT': '3306', # 데이터베이스 포트
+        'NAME' : 'starletterDB', 
+        'USER' : 'gysuths4',
+        'PASSWORD' : 'dwu-gysuths4',
+        'HOST': 'starletter-db.cj28sycmwi3x.ap-northeast-2.rds.amazonaws.com',
+        'PORT': '3306',
         'OPTIONS':{
             'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
