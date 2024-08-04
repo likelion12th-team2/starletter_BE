@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-secret_file = os.path.join(BASE_DIR, 'secrets.json') # secrets.json 파일 위치
+secret_file = os.path.join(BASE_DIR, 'secrets.json') 
 
 with open(secret_file) as f:
     secrets = json.loads(f.read())
@@ -119,7 +119,9 @@ ROOT_URLCONF = 'starletterProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'staticfiles'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -181,7 +183,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join('static')
+STATIC_ROOT = os.path.join('staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'client/static'),
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
